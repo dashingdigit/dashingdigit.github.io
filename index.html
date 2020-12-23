@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css" />
         <link rel="icon" href="./assets/img/000.png" />
         <link rel="stylesheet" href="assets/css/styles.css" />
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     </head>
 
     <body class="text-center" id="page-top" style="background: rgba(255, 255, 255, 0); text-align: center">
@@ -24,17 +25,10 @@
                 data-aos-duration="2000"
                 data-aos-once="true"
                 id="mainNav"
-                style="
-                    background: linear-gradient(146deg, #ffffff 0%, #000000 66%), rgba(255, 255, 255, 0);
-                    border-style: none;
-                    box-shadow: 0px -15px 19px 15px rgb(255, 255, 255);
-                    padding-top: 2px;
-                    padding-bottom: 2px;
-                "
+                style="background: linear-gradient(146deg, #ffffff 0%, #000000 66%), rgba(255, 255, 255, 0); border-style: none; box-shadow: 0px -15px 19px 15px rgb(255, 255, 255); padding-top: 2px; padding-bottom: 2px"
             >
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#page-top" style="margin-right: 0px; width: 195px; color: rgba(254, 209, 54, 0); padding-top: 3px; padding-bottom: 3px"
-                        ><img src="assets/img/黑標準字_工作區域%201%20複本.png" width="80%" /></a
+                    <a class="navbar-brand" href="#page-top" style="margin-right: 0px; width: 195px; color: rgba(254, 209, 54, 0); padding-top: 3px; padding-bottom: 3px"><img src="assets/img/黑標準字_工作區域%201%20複本.png" width="80%" /></a
                     ><button
                         data-toggle="collapse"
                         data-target="#navbarResponsive"
@@ -50,69 +44,50 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="nav navbar-nav ml-auto text-uppercase">
-                            <li class="nav-item">
-                                <a class="nav-link active js-scroll-trigger" href="#menu" style="color: rgb(255, 255, 255); font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 16px">目次</a>
-                            </li>
-                            <li class="nav-item" style="font-family: 'Gen Jyuu Gothic Monospace Normal'">
-                                <a class="nav-link text-white active js-scroll-trigger" href="#aboutus" style="font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 16px">關於我們</a>
-                            </li>
-                            <li class="nav-item" style="font-family: 'Gen Jyuu Gothic Monospace Normal'">
-                                <a class="nav-link text-white active js-scroll-trigger" href="#service" style="font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 16px">服務項目</a>
-                            </li>
-                            <li class="nav-item" style="font-family: 'Gen Jyuu Gothic Monospace Normal'">
-                                <a class="nav-link text-white active js-scroll-trigger" href="#collections" style="font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 16px">作品集</a>
-                            </li>
-                            <li class="nav-item" style="font-family: 'Gen Jyuu Gothic Monospace Normal'">
-                                <a class="nav-link text-white active js-scroll-trigger" href="#team" style="font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 16px">聯絡我們</a>
-                            </li>
+                            <li class="nav-item"><a class="nav-link active js-scroll-trigger" href="#menu" style="color: rgb(255, 255, 255); font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 16px">目次</a></li>
+                            <li class="nav-item" style="font-family: 'Gen Jyuu Gothic Monospace Normal'"><a class="nav-link text-white active js-scroll-trigger" href="#aboutus" style="font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 16px">關於我們</a></li>
+                            <li class="nav-item" style="font-family: 'Gen Jyuu Gothic Monospace Normal'"><a class="nav-link text-white active js-scroll-trigger" href="#service" style="font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 16px">服務項目</a></li>
+                            <li class="nav-item" style="font-family: 'Gen Jyuu Gothic Monospace Normal'"><a class="nav-link text-white active js-scroll-trigger" href="#collections" style="font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 16px">作品集</a></li>
+                            <li class="nav-item" style="font-family: 'Gen Jyuu Gothic Monospace Normal'"><a class="nav-link text-white active js-scroll-trigger" href="#team" style="font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 16px">聯絡我們</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-        <div
-            class="container-fluid text-center"
-            data-aos="fade"
-            data-aos-duration="1600"
-            data-aos-once="true"
-            style="background: url('assets/img/bk-logo.png') center / contain no-repeat, radial-gradient(rgb(255, 255, 255) -339%, rgb(0, 0, 0) 65%); height: 789px"
-        >
-            <div></div>
+        <!-- background: url('assets/img/bk-logo.png')center / contain no-repeat radial-gradient(rgb(255, 255, 255) -339%, rgb(0, 0, 0) 65%); -->
+        <div class="container-fluid text-center" id="SharkLogo" data-aos="fade" data-aos-duration="1600" data-aos-once="true" style="height: 789px">
+            <!-- <div class="container-fluid text-center"> -->
+            <svg class="mysvg" width="100%" height="100%">
+                <defs>
+                    <filter id="turb">
+                        <feTurbulence id="turbwave" type="fractalNoise" baseFrequency="0.03" numOctaves="2" result="turbulence_3" data-filterId="3" />
+                        <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="turbulence_3" scale="20" />
+                    </filter>
+                </defs>
+                <image id="img" x="0" y="0" width="100%" height="100%" xlink:href="https://dashingdigit.com/assets/img/bk-logo.png" filter="url(#turb)" />
+            </svg>
+            <!-- </div> -->
         </div>
         <div class="container-fluid" id="menu" style="padding: 0; padding-right: 20vw; padding-left: 20vw; margin-top: 10vw">
             <div class="row" style="margin: 0; margin-bottom: 10vw">
                 <div class="col" style="text-align: center"><img class="img-fluid" src="assets/img/分隔線-08.png" /></div>
             </div>
             <div class="row no-gutters" style="margin: 0">
-                <div class="col col-xl-4 col-md-12 col-lg-4 col-12 col-sm-12" style="text-align: center; padding: 0; margin-bottom: 2vw">
-                    <a
-                        class="btn btn-primary"
-                        role="button"
-                        data-bs-hover-animate="pulse"
-                        style="background: rgba(0, 123, 255, 0); border-color: rgba(255, 255, 255, 0); padding-top: 1.8vw; padding-right: 1.8vw; padding-bottom: 1.8vw; padding-left: 1.8vw"
-                        href="#aboutus"
-                        ><img class="img-fluid" src="assets/img/head3-07.png"
+                <div id="about-us-hover" class="col col-xl-4 col-md-12 col-lg-4 col-12 col-sm-12" style="text-align: center; padding: 0; margin-bottom: 2vw">
+                    <a class="btn btn-primary" role="button" style="background: rgba(0, 123, 255, 0); border-color: rgba(255, 255, 255, 0); padding-top: 1.8vw; padding-right: 1.8vw; padding-bottom: 1.8vw; padding-left: 1.8vw" href="#aboutus"
+                        ><img id="about-us" class="img-fluid" src="assets/img/head3-07.png"
                     /></a>
-                    <h1 style="margin: 0; color: rgb(255, 255, 255); font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 20px; margin-top: 3px">關於我們</h1>
+                    <h1 id="testHover" style="margin: 0; color: rgb(255, 255, 255); font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 20px; margin-top: 3px">關於我們</h1>
                 </div>
                 <div class="col col-xl-4 col-md-12 col-lg-4 col-12 col-sm-12" style="text-align: center; padding: 0; margin-bottom: 2vw">
-                    <a
-                        class="btn btn-primary bounce animated infinite"
-                        role="button"
-                        style="background: rgba(0, 123, 255, 0); border-color: rgba(255, 255, 255, 0); padding-top: 1.8vw; padding-right: 1.8vw; padding-bottom: 1.8vw; padding-left: 1.8vw"
-                        href="#team"
-                        ><img class="img-fluid" src="assets/img/head2-07.png"
+                    <a class="btn btn-primary bounce animated infinite" role="button" style="background: rgba(0, 123, 255, 0); border-color: rgba(255, 255, 255, 0); padding-top: 1.8vw; padding-right: 1.8vw; padding-bottom: 1.8vw; padding-left: 1.8vw" href="#team"
+                        ><img id="contact" class="img-fluid" src="assets/img/head2-07.png"
                     /></a>
                     <h1 style="margin: 0; color: rgb(255, 255, 255); font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 20px; margin-top: 3px">聯絡我們</h1>
                 </div>
-                <div class="col col-xl-4 col-md-12 col-lg-4 col-12 col-sm-12" style="text-align: center; padding: 0; margin-bottom: 2vw">
-                    <a
-                        class="btn btn-primary"
-                        role="button"
-                        data-bs-hover-animate="pulse"
-                        style="background: rgba(0, 123, 255, 0); border-color: rgba(255, 255, 255, 0); padding-top: 1.8vw; padding-right: 1.8vw; padding-bottom: 1.8vw; padding-left: 1.8vw"
-                        href="#collections"
-                        ><img class="img-fluid" src="assets/img/head-07.png"
+                <div id="collections-hover" class="col col-xl-4 col-md-12 col-lg-4 col-12 col-sm-12" style="text-align: center; padding: 0; margin-bottom: 2vw">
+                    <a class="btn btn-primary" role="button" data-bs-hover-animate="pulse" style="background: rgba(0, 123, 255, 0); border-color: rgba(255, 255, 255, 0); padding-top: 1.8vw; padding-right: 1.8vw; padding-bottom: 1.8vw; padding-left: 1.8vw" href="#collections"
+                        ><img id="collections" class="img-fluid" src="assets/img/head-07.png"
                     /></a>
                     <h1 style="margin: 0; color: rgb(255, 255, 255); font-family: 'Gen Jyuu Gothic Monospace Normal'; font-size: 20px; margin-top: 3px">作品集</h1>
                 </div>
@@ -123,22 +98,13 @@
             <div class="row" style="margin: 0">
                 <div class="col" style="text-align: center; padding: 0">
                     <div class="row" style="margin: 0; text-align: left; margin-bottom: 8vw; margin-left: -7vw">
-                        <div class="col flash animated infinite col-xl-5 col-lg-5 col-md-5" style="padding: 0; animation-duration: 2.4s">
-                            <img class="img-fluid" src="assets/img/word/light/關於我們-04.png" width="95%" />
-                        </div>
+                        <div class="col flash animated infinite col-xl-5 col-lg-5 col-md-5" style="padding: 0; animation-duration: 2.4s"><img class="img-fluid" src="assets/img/word/light/關於我們-04.png" width="95%" /></div>
                     </div>
                     <div class="row no-gutters" style="margin: 0; text-align: left; margin-left: -33px">
                         <div class="col" style="padding: 0; background: url('assets/img/about/New%20about/分-04.png') left / contain no-repeat; margin-left: -4.5vw; text-align: center">
                             <div class="row" style="margin: 0; margin-bottom: 10vw; margin-right: 7vw; margin-top: 5vw; margin-left: -8.5vw">
-                                <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" style="padding: 0; padding-left: 1vw">
-                                    <img class="img-fluid" src="assets/img/about/New%20about/分-05.png" width="40%" />
-                                </div>
-                                <div
-                                    class="col align-self-center col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"
-                                    data-aos="fade-right"
-                                    data-aos-duration="1000"
-                                    style="padding-left: 9.6vw; padding-right: 0"
-                                >
+                                <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" style="padding: 0; padding-left: 1vw"><img class="img-fluid" src="assets/img/about/New%20about/分-05.png" width="40%" /></div>
+                                <div class="col align-self-center col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" data-aos-duration="1000" style="padding-left: 9.6vw; padding-right: 0">
                                     <div class="row no-gutters text-left" style="margin: 0">
                                         <div class="col"><strong style="font-family: Montserrat, sans-serif; letter-spacing: 0.5vw; font-size: 25px">2016年</strong></div>
                                     </div>
@@ -147,24 +113,15 @@
                                     </div>
                                     <div class="row no-gutters text-left" style="margin: 0">
                                         <div class="col">
-                                            <p style="font-family: 'Gen Jyuu Gothic Monospace'; letter-spacing: 0.2vw; margin: 0; font-size: 17px">
-                                                以私人工作室名義運作，服務宗旨為創造價值、靈活應對問題、快速開發。
-                                            </p>
+                                            <p style="font-family: 'Gen Jyuu Gothic Monospace'; letter-spacing: 0.2vw; margin: 0; font-size: 17px">以私人工作室名義運作，服務宗旨為創造價值、靈活應對問題、快速開發。</p>
                                             <hr style="border-color: rgb(0, 0, 0); margin-top: 22px; margin-bottom: 22px" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row" style="margin: 0; margin-bottom: 10vw; margin-left: -8.5vw; margin-right: 7vw; margin-top: 5vw">
-                                <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" style="padding: 0; padding-left: 1vw">
-                                    <img class="img-fluid" id="appimg" width="40%" src="assets/img/about/New%20about/分-06.png" />
-                                </div>
-                                <div
-                                    class="col align-self-center col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"
-                                    data-aos="fade-right"
-                                    data-aos-duration="1000"
-                                    style="padding-right: 0; padding-left: 9.6vw"
-                                >
+                                <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" style="padding: 0; padding-left: 1vw"><img class="img-fluid" id="appimg" width="40%" src="assets/img/about/New%20about/分-06.png" /></div>
+                                <div class="col align-self-center col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" data-aos-duration="1000" style="padding-right: 0; padding-left: 9.6vw">
                                     <div class="row no-gutters text-left" style="margin: 0">
                                         <div class="col"><strong style="font-family: Montserrat, sans-serif; letter-spacing: 0.5vw; font-size: 25px">2017年</strong></div>
                                     </div>
@@ -173,24 +130,15 @@
                                     </div>
                                     <div class="row no-gutters text-left" style="margin: 0">
                                         <div class="col">
-                                            <p style="font-family: 'Gen Jyuu Gothic Monospace'; letter-spacing: 0.2vw; margin: 0; font-size: 17px">
-                                                在AppStore與GooglePlay上架。<br />2017年協助多家企業建立雲端Server、Database並串接網站、軟體。
-                                            </p>
+                                            <p style="font-family: 'Gen Jyuu Gothic Monospace'; letter-spacing: 0.2vw; margin: 0; font-size: 17px">在AppStore與GooglePlay上架。<br />2017年協助多家企業建立雲端Server、Database並串接網站、軟體。</p>
                                             <hr style="border-color: rgb(0, 0, 0); margin-top: 22px; margin-bottom: 22px" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row" style="margin: 0; margin-bottom: 10vw; margin-left: -8.5vw; margin-right: 7vw; margin-top: 5vw">
-                                <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" style="padding: 0; padding-left: 1vw">
-                                    <img class="img-fluid" src="assets/img/about/New%20about/分-07.png" width="40%" />
-                                </div>
-                                <div
-                                    class="col align-self-center col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"
-                                    data-aos="fade-right"
-                                    data-aos-duration="1000"
-                                    style="padding-right: 0; padding-left: 9.6vw"
-                                >
+                                <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" style="padding: 0; padding-left: 1vw"><img class="img-fluid" src="assets/img/about/New%20about/分-07.png" width="40%" /></div>
+                                <div class="col align-self-center col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" data-aos-duration="1000" style="padding-right: 0; padding-left: 9.6vw">
                                     <div class="row no-gutters text-left" style="margin: 0">
                                         <div class="col"><strong style="font-family: Montserrat, sans-serif; letter-spacing: 0.5vw; font-size: 25px">2018年</strong></div>
                                     </div>
@@ -206,15 +154,8 @@
                                 </div>
                             </div>
                             <div class="row" style="margin: 0; margin-bottom: 10vw; margin-left: -8.5vw; margin-right: 7vw; margin-top: 5vw">
-                                <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" style="padding: 0; padding-left: 1vw">
-                                    <img class="img-fluid" src="assets/img/about/New%20about/分-08.png" width="40%" />
-                                </div>
-                                <div
-                                    class="col align-self-center col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"
-                                    data-aos="fade-right"
-                                    data-aos-duration="1000"
-                                    style="padding-left: 9.6vw; padding-right: 0"
-                                >
+                                <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" style="padding: 0; padding-left: 1vw"><img class="img-fluid" src="assets/img/about/New%20about/分-08.png" width="40%" /></div>
+                                <div class="col align-self-center col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" data-aos-duration="1000" style="padding-left: 9.6vw; padding-right: 0">
                                     <div class="row no-gutters text-left" style="margin: 0">
                                         <div class="col"><strong style="font-family: Montserrat, sans-serif; font-size: 25px; letter-spacing: 0.5vw">2019年</strong></div>
                                     </div>
@@ -223,24 +164,15 @@
                                     </div>
                                     <div class="row no-gutters text-left" style="margin: 0">
                                         <div class="col">
-                                            <p style="font-family: 'Gen Jyuu Gothic Monospace'; letter-spacing: 0.2vw; margin: 0; font-size: 17px">
-                                                澳門-2019年5月23日<br />第十三屆亞洲國際娛樂展 (G2E Asia)<br />亞洲地區最大的博彩娛樂產業交流平台與領導展會。
-                                            </p>
+                                            <p style="font-family: 'Gen Jyuu Gothic Monospace'; letter-spacing: 0.2vw; margin: 0; font-size: 17px">澳門-2019年5月23日<br />第十三屆亞洲國際娛樂展 (G2E Asia)<br />亞洲地區最大的博彩娛樂產業交流平台與領導展會。</p>
                                             <hr style="border-color: rgb(0, 0, 0); margin-top: 22px; margin-bottom: 22px" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row" style="margin: 0; margin-bottom: 10vw; margin-left: -8.5vw; margin-right: 7vw; margin-top: 5vw">
-                                <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" style="padding: 0; padding-left: 1vw">
-                                    <img class="img-fluid" src="assets/img/about/New%20about/分-09.png" width="40%" />
-                                </div>
-                                <div
-                                    class="col align-self-center col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"
-                                    data-aos="fade-right"
-                                    data-aos-duration="1000"
-                                    style="padding-left: 9.6vw; padding-right: 0"
-                                >
+                                <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" style="padding: 0; padding-left: 1vw"><img class="img-fluid" src="assets/img/about/New%20about/分-09.png" width="40%" /></div>
+                                <div class="col align-self-center col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" data-aos="fade-right" data-aos-duration="1000" style="padding-left: 9.6vw; padding-right: 0">
                                     <div class="row no-gutters text-left" style="margin: 0">
                                         <div class="col" style="font-size: 27px"><strong style="font-family: Montserrat, sans-serif; letter-spacing: 0.5vw; font-size: 25px">2020年</strong></div>
                                     </div>
@@ -261,9 +193,7 @@
         </div>
         <div class="container-fluid" id="service" style="padding-right: 18vw; padding-left: 18vw; padding-top: 11vw">
             <div class="row text-left" style="margin: 0; margin-right: -4.4vw; margin-left: -4.4vw">
-                <div class="col flash animated infinite col-xl-5 col-lg-5 col-md-5" style="padding: 0; animation-duration: 2.4s">
-                    <img class="img-fluid" src="assets/img/word/light/服務項目-03.png" width="95%" />
-                </div>
+                <div class="col flash animated infinite col-xl-5 col-lg-5 col-md-5" style="padding: 0; animation-duration: 2.4s"><img class="img-fluid" src="assets/img/word/light/服務項目-03.png" width="95%" /></div>
             </div>
             <div class="row" style="margin: 0; margin-bottom: 12vw">
                 <div class="col" style="padding: 0">
@@ -286,9 +216,7 @@
                             <div class="row" style="margin-right: 0; margin-left: 0">
                                 <div class="col" data-aos="fade-left" data-aos-once="true" style="text-align: left">
                                     <h4 style="color: rgb(255, 255, 255); margin-bottom: 38px"><strong>Web Design&nbsp; |&nbsp;&nbsp;網站設計製作管理</strong></h4>
-                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'"
-                                        >形象網站設計開發<br />行銷團隊量身訂做符合自身企業形象的網站。</span
-                                    >
+                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'">形象網站設計開發<br />行銷團隊量身訂做符合自身企業形象的網站。</span>
                                 </div>
                             </div>
                         </div>
@@ -301,9 +229,7 @@
                             <div class="row" style="margin-right: 0; margin-left: 0">
                                 <div class="col text-left" data-aos="fade-right" data-aos-once="true">
                                     <h4 style="color: rgb(255, 255, 255); margin-bottom: 38px"><strong>Android / iOS &nbsp;|&nbsp;&nbsp;App開發&nbsp;</strong></h4>
-                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'"
-                                        >團隊自行研發行動裝置App<br />打造自己產品專屬的App<br />提供更優質的產品服務。</span
-                                    >
+                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'">團隊自行研發行動裝置App<br />打造自己產品專屬的App<br />提供更優質的產品服務。</span>
                                 </div>
                             </div>
                         </div>
@@ -314,9 +240,7 @@
                             <div class="row" style="margin-right: 0; margin-left: 0">
                                 <div class="col" data-aos="fade-left" data-aos-once="true">
                                     <h4 style="color: rgb(255, 255, 255); margin-bottom: 38px"><strong>Mobile Game&nbsp; |&nbsp; 手機遊戲開發</strong></h4>
-                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'"
-                                        >團隊自行研發行動裝置遊戲App<br />讓公司快速跨入經營手遊的門檻。</span
-                                    >
+                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'">團隊自行研發行動裝置遊戲App<br />讓公司快速跨入經營手遊的門檻。</span>
                                 </div>
                             </div>
                         </div>
@@ -329,9 +253,7 @@
                             <div class="row" style="margin-right: 0; margin-left: 0">
                                 <div class="col text-left" data-aos="fade-right" data-aos-once="true">
                                     <h4 style="color: rgb(255, 255, 255); margin-bottom: 38px"><strong>HTML 5&nbsp; |&nbsp;&nbsp;遊戲設計製作&nbsp;</strong></h4>
-                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'"
-                                        >HTML5網頁遊戲設計<br />無論為博弈遊戲對接或是線上小遊戲製作皆為服務涵蓋範圍。</span
-                                    >
+                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'">HTML5網頁遊戲設計<br />無論為博弈遊戲對接或是線上小遊戲製作皆為服務涵蓋範圍。</span>
                                 </div>
                             </div>
                         </div>
@@ -342,9 +264,7 @@
                             <div class="row" style="margin-right: 0; margin-left: 0">
                                 <div class="col" data-aos="fade-left" data-aos-once="true" style="text-align: left">
                                     <h4 style="color: rgb(255, 255, 255); margin-bottom: 38px"><strong>Cloud&nbsp; |&nbsp;&nbsp;雲端伺服器/資料庫管理</strong></h4>
-                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'"
-                                        >GCP雲端伺服器架設<br />SQL、NOSQL資料庫設計管理<br />為公司打造可靠的服務後端。</span
-                                    >
+                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'">GCP雲端伺服器架設<br />SQL、NOSQL資料庫設計管理<br />為公司打造可靠的服務後端。</span>
                                 </div>
                             </div>
                         </div>
@@ -357,9 +277,7 @@
                             <div class="row" style="margin-right: 0; margin-left: 0">
                                 <div class="col text-left" data-aos="fade-right" data-aos-once="true">
                                     <h4 style="color: rgb(255, 255, 255); margin-bottom: 38px"><strong>Report&nbsp; |&nbsp;&nbsp;後臺報表呈現&nbsp;</strong></h4>
-                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'"
-                                        >以網頁報表呈現公司各項產品經營現況<br />隨時隨地都可監控公司狀態。</span
-                                    >
+                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'">以網頁報表呈現公司各項產品經營現況<br />隨時隨地都可監控公司狀態。</span>
                                 </div>
                             </div>
                         </div>
@@ -370,9 +288,7 @@
                             <div class="row" style="margin-right: 0; margin-left: 0">
                                 <div class="col" data-aos="fade-left" data-aos-once="true" style="text-align: left">
                                     <h4 style="color: rgb(255, 255, 255); margin-bottom: 38px"><strong>品牌社群行銷經營&nbsp; |&nbsp;&nbsp;代理廣告投放</strong><br /></h4>
-                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'"
-                                        >專業行銷團隊在各大社群平台<br />廣告平台進行行銷與廣告投放<br />精準分析客群面貌與市場現況<br />讓產品準確命中核心客群。</span
-                                    >
+                                    <span style="color: rgb(255, 255, 255); line-height: 34px; padding-bottom: 0; font-family: 'Gen Jyuu Gothic Monospace'">專業行銷團隊在各大社群平台<br />廣告平台進行行銷與廣告投放<br />精準分析客群面貌與市場現況<br />讓產品準確命中核心客群。</span>
                                 </div>
                             </div>
                         </div>
@@ -384,110 +300,67 @@
         </div>
         <div class="container-fluid" id="collections" style="padding-right: 13vw; padding-left: 13vw; background: url('assets/img/bk.jpg') center / cover repeat; padding-top: 11vw">
             <div class="row text-left" style="margin: 0; margin-bottom: 12vw">
-                <div class="col flash animated infinite col-xl-5 col-lg-5 col-md-5" style="padding: 0; animation-duration: 2.4s">
-                    <img class="img-fluid" src="assets/img/word/light/作品-02.png" width="95%" />
-                </div>
+                <div class="col flash animated infinite col-xl-5 col-lg-5 col-md-5" style="padding: 0; animation-duration: 2.4s"><img class="img-fluid" src="assets/img/word/light/作品-02.png" width="95%" /></div>
             </div>
             <div class="row no-gutters justify-content-center" style="text-align: center; margin-bottom: 10vw; margin-right: -5vw; margin-left: -5vw">
                 <div class="col col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2" style="margin-right: 0.25vw; margin-left: 0.25vw; margin-bottom: 2vw">
-                    <a class="btn btn-block" role="button" data-bs-hover-animate="pulse" style="padding: 0; border-style: none" href="#slot"
-                        ><img class="img-fluid" src="assets/img/icon/icon-03.png"
-                    /></a>
+                    <a class="btn btn-block" role="button" data-bs-hover-animate="pulse" style="padding: 0; border-style: none" href="#slot"><img class="img-fluid" src="assets/img/icon/icon-03.png" /></a>
                 </div>
                 <div class="col col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2" style="margin-right: 0.25vw; margin-left: 0.25vw; margin-bottom: 2vw">
-                    <a class="btn btn-block" role="button" data-bs-hover-animate="pulse" style="padding: 0; border-style: none" href="#webdesign"
-                        ><img class="img-fluid" src="assets/img/icon/icon-05.png"
-                    /></a>
+                    <a class="btn btn-block" role="button" data-bs-hover-animate="pulse" style="padding: 0; border-style: none" href="#webdesign"><img class="img-fluid" src="assets/img/icon/icon-05.png" /></a>
                 </div>
                 <div class="col col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2" style="margin-right: 0.25vw; margin-left: 0.25vw; margin-bottom: 7vw">
-                    <a class="btn btn-block" role="button" data-bs-hover-animate="pulse" style="padding: 0; border-style: none" href="#appdesign"
-                        ><img class="img-fluid" src="assets/img/icon/icon-06.png"
-                    /></a>
+                    <a class="btn btn-block" role="button" data-bs-hover-animate="pulse" style="padding: 0; border-style: none" href="#appdesign"><img class="img-fluid" src="assets/img/icon/icon-06.png" /></a>
                 </div>
                 <div class="col col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2" style="margin-right: 0.25vw; margin-left: 0.25vw; margin-bottom: 3vw">
-                    <a class="btn btn-block" role="button" data-bs-hover-animate="pulse" style="padding: 0; border-style: none" href="#appdesign"
-                        ><img class="img-fluid" src="assets/img/icon/icon-04.png"
-                    /></a>
+                    <a class="btn btn-block" role="button" data-bs-hover-animate="pulse" style="padding: 0; border-style: none" href="#appdesign"><img class="img-fluid" src="assets/img/icon/icon-04.png" /></a>
                 </div>
                 <div class="col col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2" style="margin-right: 0.25vw; margin-left: 0.25vw">
-                    <a class="btn btn-block" role="button" data-bs-hover-animate="pulse" style="padding: 0; border-style: none" href="#design"
-                        ><img class="img-fluid" src="assets/img/icon/icon-07.png"
-                    /></a>
+                    <a class="btn btn-block" role="button" data-bs-hover-animate="pulse" style="padding: 0; border-style: none" href="#design"><img class="img-fluid" src="assets/img/icon/icon-07.png" /></a>
                 </div>
             </div>
             <hr style="margin-top: 25px; border-style: dashed; border-color: rgb(0, 0, 0); margin-bottom: 0" />
         </div>
         <div class="container-fluid" id="slot" style="padding: 0; padding-right: 20vw; padding-left: 20vw; background: url('assets/img/bk.jpg'); padding-top: 8vw">
             <div class="row no-gutters justify-content-center" data-aos="fade" data-aos-duration="1000" style="margin: 0; margin-bottom: 9vw; text-align: center">
-                <div
-                    class="col align-self-center col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"
-                    style="padding: 0; background: rgba(255, 255, 255, 0); border-radius: 70px; box-shadow: inset 0px 4px 6px; padding-top: 0.5vw"
-                >
+                <div class="col align-self-center col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" style="padding: 0; background: rgba(255, 255, 255, 0); border-radius: 70px; box-shadow: inset 0px 4px 6px; padding-top: 0.5vw">
                     <h1 style="margin: 0; font-size: 25px; font-family: 'Gen Jyuu Gothic Monospace Normal'; color: #4d4d4d">- S l o t -</h1>
                 </div>
             </div>
             <div class="row" style="margin: 0">
-                <div
-                    class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12"
-                    data-bs-hover-animate="pulse"
-                    style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw; margin-bottom: 15vw"
-                >
+                <div class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12" data-bs-hover-animate="pulse" style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw; margin-bottom: 15vw">
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col">
-                            <a class="btn" role="button" style="padding: 0" href="#slotmodal-1" data-toggle="modal"
-                                ><img class="img-fluid" src="assets/img/collections/01.png" style="border-top-left-radius: 20px; border-top-right-radius: 20px"
-                            /></a>
+                            <a class="btn" role="button" style="padding: 0" href="#slotmodal-1" data-toggle="modal"><img class="img-fluid" src="assets/img/collections/01.png" style="border-top-left-radius: 20px; border-top-right-radius: 20px" /></a>
                         </div>
                     </div>
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col" style="background: #ffffff; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; box-shadow: 2px 7px 6px rgba(33, 37, 41, 0.54)">
-                            <a
-                                class="btn btn-block"
-                                role="button"
-                                style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'"
-                                href="#portfolioModal1"
-                                >鑽鑽鑽 Slot<br
-                            /></a>
+                            <a class="btn btn-block" role="button" style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'" href="#portfolioModal1">鑽鑽鑽 Slot<br /></a>
                         </div>
                     </div>
                 </div>
-                <div
-                    class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12"
-                    data-bs-hover-animate="pulse"
-                    style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw; margin-bottom: 15vw"
-                >
+                <div class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12" data-bs-hover-animate="pulse" style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw; margin-bottom: 15vw">
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col">
-                            <a class="btn" role="button" style="padding: 0" href="#slotmodal-2" data-toggle="modal"
-                                ><img class="img-fluid" src="assets/img/collections/02.png" style="border-top-left-radius: 20px; border-top-right-radius: 20px"
-                            /></a>
+                            <a class="btn" role="button" style="padding: 0" href="#slotmodal-2" data-toggle="modal"><img class="img-fluid" src="assets/img/collections/02.png" style="border-top-left-radius: 20px; border-top-right-radius: 20px" /></a>
                         </div>
                     </div>
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col" style="background: #ffffff; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; box-shadow: 2px 7px 6px rgba(33, 37, 41, 0.54)">
-                            <button class="btn btn-block" type="button" style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'">
-                                狂野非洲 BonusGame<br />
-                            </button>
+                            <button class="btn btn-block" type="button" style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'">狂野非洲 BonusGame<br /></button>
                         </div>
                     </div>
                 </div>
-                <div
-                    class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12"
-                    data-bs-hover-animate="pulse"
-                    style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw; margin-bottom: 15vw"
-                >
+                <div class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12" data-bs-hover-animate="pulse" style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw; margin-bottom: 15vw">
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col">
-                            <a class="btn" role="button" style="padding: 0" href="#slotmodal-3" data-toggle="modal"
-                                ><img class="img-fluid" src="assets/img/collections/5.png" style="border-top-left-radius: 20px; border-top-right-radius: 20px"
-                            /></a>
+                            <a class="btn" role="button" style="padding: 0" href="#slotmodal-3" data-toggle="modal"><img class="img-fluid" src="assets/img/collections/5.png" style="border-top-left-radius: 20px; border-top-right-radius: 20px" /></a>
                         </div>
                     </div>
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col" style="background: #ffffff; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; box-shadow: 2px 7px 6px rgba(33, 37, 41, 0.54)">
-                            <button class="btn btn-block" type="button" style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'">
-                                恭賀新禧 BonusGame<br />
-                            </button>
+                            <button class="btn btn-block" type="button" style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'">恭賀新禧 BonusGame<br /></button>
                         </div>
                     </div>
                 </div>
@@ -495,56 +368,32 @@
         </div>
         <div class="container-fluid" id="webdesign" style="padding: 0; padding-right: 20vw; padding-left: 20vw; padding-top: 161px; padding-bottom: 4vw">
             <div class="row justify-content-center" data-aos="fade" data-aos-duration="1000" style="margin: 0; margin-bottom: 120px; text-align: center">
-                <div
-                    class="col col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"
-                    style="padding: 0; background: rgba(255, 255, 255, 0); border-radius: 70px; box-shadow: 0px 4px 8px rgb(255, 255, 255); padding-bottom: 0.2vw; padding-top: 0.2vw"
-                >
+                <div class="col col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" style="padding: 0; background: rgba(255, 255, 255, 0); border-radius: 70px; box-shadow: 0px 4px 8px rgb(255, 255, 255); padding-bottom: 0.2vw; padding-top: 0.2vw">
                     <h1 style="margin: 0; font-size: 30px; font-family: 'Gen Jyuu Gothic Monospace Normal'; color: #cccccc">- Web Design -<br /></h1>
                 </div>
             </div>
             <div class="row" style="margin: 0; margin-right: -3vw; margin-left: -3vw">
-                <div
-                    class="col col-xl-6 col-lg-6 col-md-12 col-12 col-sm-12"
-                    data-bs-hover-animate="pulse"
-                    style="text-align: center; padding: 0; margin-bottom: 15vw; margin-right: 0px; padding-right: 1vw"
-                >
+                <div class="col col-xl-6 col-lg-6 col-md-12 col-12 col-sm-12" data-bs-hover-animate="pulse" style="text-align: center; padding: 0; margin-bottom: 15vw; margin-right: 0px; padding-right: 1vw">
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col">
-                            <a class="btn" role="button" style="padding: 0" href="https://rinran311.github.io/flowers/"
-                                ><img class="img-fluid" src="assets/img/collections/flowers/flower.gif" style="border-top-left-radius: 20px; border-top-right-radius: 20px"
-                            /></a>
+                            <a class="btn" role="button" style="padding: 0" href="https://rinran311.github.io/flowers/"><img class="img-fluid" src="assets/img/collections/flowers/flower.gif" style="border-top-left-radius: 20px; border-top-right-radius: 20px" /></a>
                         </div>
                     </div>
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col" style="background: #ffffff; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; box-shadow: 0px 6px 13px rgba(255, 255, 255, 0.54)">
-                            <a
-                                class="btn btn-block"
-                                role="button"
-                                style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'"
-                                href="https://rinran311.github.io/flowers/"
-                                >UNIQUE Florist Studio</a
-                            >
+                            <a class="btn btn-block" role="button" style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'" href="https://rinran311.github.io/flowers/">UNIQUE Florist Studio</a>
                         </div>
                     </div>
                 </div>
                 <div class="col col-xl-6 col-lg-6 col-md-12 col-12 col-sm-12" data-bs-hover-animate="pulse" style="text-align: center; margin-bottom: 15vw; padding-left: 1vw; padding-right: 0">
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col">
-                            <a class="btn" role="button" style="padding: 0" href="#web2" data-toggle="modal"
-                                ><img class="img-fluid" src="assets/img/collections/star/star.gif" style="border-top-left-radius: 20px; border-top-right-radius: 20px"
-                            /></a>
+                            <a class="btn" role="button" style="padding: 0" href="#web2" data-toggle="modal"><img class="img-fluid" src="assets/img/collections/star/star.gif" style="border-top-left-radius: 20px; border-top-right-radius: 20px" /></a>
                         </div>
                     </div>
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col" style="background: #ffffff; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; box-shadow: 0px 6px 13px rgba(255, 255, 255, 0.54)">
-                            <a
-                                class="btn btn-block"
-                                role="button"
-                                style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'"
-                                data-toggle="modal"
-                                href="#web2"
-                                >Star Luxe Design</a
-                            >
+                            <a class="btn btn-block" role="button" style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'" data-toggle="modal" href="#web2">Star Luxe Design</a>
                         </div>
                     </div>
                 </div>
@@ -552,10 +401,7 @@
         </div>
         <div class="container-fluid" id="appdesign" style="padding: 0; padding-right: 20vw; padding-left: 20vw; padding-top: 161px; background: url('assets/img/bk.jpg'); padding-bottom: 4vw">
             <div class="row no-gutters justify-content-center" data-aos="fade" data-aos-duration="1000" style="margin: 0; margin-bottom: 9vw; text-align: center">
-                <div
-                    class="col align-self-center col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"
-                    style="padding: 0; background: rgba(255, 255, 255, 0); border-radius: 70px; box-shadow: inset 0px 4px 6px; padding-top: 0.5vw"
-                >
+                <div class="col align-self-center col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" style="padding: 0; background: rgba(255, 255, 255, 0); border-radius: 70px; box-shadow: inset 0px 4px 6px; padding-top: 0.5vw">
                     <h1 style="margin: 0; font-size: 30px; font-family: 'Gen Jyuu Gothic Monospace Normal'; color: #4d4d4d">- APP Design -</h1>
                 </div>
             </div>
@@ -563,16 +409,12 @@
                 <div class="col col-xl-4 col-lg-4 col-md-6 col-12 col-sm-12" style="text-align: center; padding: 0; margin-bottom: 15vw">
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col" style="width: 100%">
-                            <button class="btn" type="button" style="padding: 0; width: 100%">
-                                <img src="assets/img/collections/app/ezgif.com-gif-maker.gif" style="border-top-left-radius: 20px; border-top-right-radius: 20px" width="100%" />
-                            </button>
+                            <button class="btn" type="button" style="padding: 0; width: 100%"><img src="assets/img/collections/app/ezgif.com-gif-maker.gif" style="border-top-left-radius: 20px; border-top-right-radius: 20px" width="100%" /></button>
                         </div>
                     </div>
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col" style="background: #ffffff; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; box-shadow: 2px 7px 6px rgba(33, 37, 41, 0.54)">
-                            <button class="btn btn-block" type="button" style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'">
-                                Web APP設計<br />
-                            </button>
+                            <button class="btn btn-block" type="button" style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'">通寶 會員端APP<br /></button>
                         </div>
                     </div>
                 </div>
@@ -580,69 +422,36 @@
         </div>
         <div class="container-fluid" id="design" style="padding: 0; padding-right: 20vw; padding-left: 20vw; padding-top: 161px">
             <div class="row justify-content-center" data-aos="fade" data-aos-duration="1000" style="margin: 0; margin-bottom: 120px; text-align: center">
-                <div
-                    class="col col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5"
-                    style="padding: 0; background: rgba(255, 255, 255, 0); border-radius: 70px; box-shadow: 0px 4px 8px rgb(255, 255, 255); padding-bottom: 0.2vw; padding-top: 0.2vw"
-                >
+                <div class="col col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" style="padding: 0; background: rgba(255, 255, 255, 0); border-radius: 70px; box-shadow: 0px 4px 8px rgb(255, 255, 255); padding-bottom: 0.2vw; padding-top: 0.2vw">
                     <h1 style="margin: 0; font-size: 30px; font-family: 'Gen Jyuu Gothic Monospace Normal'; color: #cccccc">-&nbsp; Design -<br /></h1>
                 </div>
             </div>
             <div class="row" style="margin: 0">
-                <div
-                    class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12"
-                    data-bs-hover-animate="pulse"
-                    style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw; margin-bottom: 13vw"
-                >
+                <div class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12" data-bs-hover-animate="pulse" style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw; margin-bottom: 13vw">
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col">
-                            <a class="btn" role="button" style="padding: 0; background: #ffffff" href="#logo1" data-toggle="modal"
-                                ><img class="img-fluid" src="assets/img/collections/design/網頁用-04.png" style="border-top-left-radius: 20px; border-top-right-radius: 20px"
-                            /></a>
+                            <a class="btn" role="button" style="padding: 0; background: #ffffff" href="#logo1" data-toggle="modal"><img class="img-fluid" src="assets/img/collections/design/網頁用-04.png" style="border-top-left-radius: 20px; border-top-right-radius: 20px" /></a>
                         </div>
                     </div>
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col" style="background: #ffffff; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; box-shadow: 0px 7px 13px rgba(255, 255, 255, 0.54)">
-                            <a
-                                class="btn btn-block"
-                                role="button"
-                                style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'"
-                                data-toggle="modal"
-                                href="#logo1"
-                                >LOGO</a
-                            >
+                            <a class="btn btn-block" role="button" style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'" data-toggle="modal" href="#logo1">LOGO</a>
                         </div>
                     </div>
                 </div>
-                <div
-                    class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12"
-                    data-bs-hover-animate="pulse"
-                    style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw; margin-bottom: 13vw"
-                >
+                <div class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12" data-bs-hover-animate="pulse" style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw; margin-bottom: 13vw">
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col">
-                            <a class="btn" role="button" style="padding: 0; background: #ffffff" data-toggle="modal" href="#icon1"
-                                ><img class="img-fluid" src="assets/img/collections/design/ICON/1-01.png"
-                            /></a>
+                            <a class="btn" role="button" style="padding: 0; background: #ffffff" data-toggle="modal" href="#icon1"><img class="img-fluid" src="assets/img/collections/design/ICON/1-01.png" /></a>
                         </div>
                     </div>
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col" style="background: #ffffff; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; box-shadow: 0px 7px 13px rgba(255, 255, 255, 0.54)">
-                            <a
-                                class="btn btn-block"
-                                role="button"
-                                style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'"
-                                data-toggle="modal"
-                                href="#icon1"
-                                >icon<br
-                            /></a>
+                            <a class="btn btn-block" role="button" style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'" data-toggle="modal" href="#icon1">icon<br /></a>
                         </div>
                     </div>
                 </div>
-                <div
-                    class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12"
-                    data-bs-hover-animate="pulse"
-                    style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw; margin-bottom: 13vw"
-                >
+                <div class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12" data-bs-hover-animate="pulse" style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw; margin-bottom: 13vw">
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col">
                             <a class="btn" role="button" style="padding: 0" data-toggle="modal" href="#art"><img class="img-fluid" src="assets/img/collections/design/ICON/2-01.png" /></a>
@@ -650,14 +459,7 @@
                     </div>
                     <div class="row no-gutters" style="margin: 0">
                         <div class="col" style="background: #ffffff; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; box-shadow: 0px 7px 13px rgba(255, 255, 255, 0.54)">
-                            <a
-                                class="btn btn-block"
-                                role="button"
-                                style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'"
-                                data-toggle="modal"
-                                href="#art"
-                                >美術製圖<br
-                            /></a>
+                            <a class="btn btn-block" role="button" style="padding: 0; font-size: 20px; margin-bottom: 0.7vw; margin-top: 0.7vw; font-family: 'Gen Jyuu Gothic Monospace Normal'" data-toggle="modal" href="#art">美術製圖<br /></a>
                         </div>
                     </div>
                 </div>
@@ -668,7 +470,7 @@
                 <div class="col col-xl-4 col-lg-4 col-md-4 col-12 col-sm-12" style="padding: 0; text-align: center; font-family: 'Gen Jyuu Gothic Monospace Normal'; margin-bottom: 2vw">
                     <img class="img-fluid" src="assets/img/team/phone-02.png" />
                     <div class="row justify-content-center" style="margin: 0">
-                        <h4 style="margin: 0; font-size: 29px; font-family: 'Gen Jyuu Gothic Monospace Normal'">Phone Number</h4>
+                        <h4 id="pn" style="margin: 0; font-size: 29px; font-family: 'Gen Jyuu Gothic Monospace Normal'">Phone Number</h4>
                     </div>
                     <div class="row justify-content-center" style="margin: 0; margin-top: 10px">
                         <p style="font-size: 23px; margin-bottom: 0">0937 - 583412 <br />Kevin Huang</p>
@@ -710,22 +512,11 @@
                             id="sendMessageButton-1"
                             href="#page-top"
                             target="_top"
-                            style="
-                                background: rgba(50, 50, 50, 0.35);
-                                font-size: 25px;
-                                color: rgb(255, 255, 255);
-                                border-top-left-radius: -29px;
-                                border: 10px none #ffffff;
-                                border-top-right-radius: -23px;
-                                border-bottom-right-radius: -22px;
-                                border-bottom-left-radius: -20px;
-                            "
+                            style="background: rgba(50, 50, 50, 0.35); font-size: 25px; color: rgb(255, 255, 255); border-top-left-radius: -29px; border: 10px none #ffffff; border-top-right-radius: -23px; border-bottom-right-radius: -22px; border-bottom-left-radius: -20px"
                             >T&nbsp; o&nbsp; p</a
                         >
                     </div>
-                    <div class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12" style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw">
-                        <a href="隱私權政策.html" style="color: rgb(255, 255, 255); font-size: 12px">隱私權政策</a>
-                    </div>
+                    <div class="col col-xl-4 col-lg-4 col-md-12 col-12 col-sm-12" style="text-align: center; padding: 0; padding-right: 1vw; padding-left: 1vw"><a href="隱私權政策.html" style="color: rgb(255, 255, 255); font-size: 12px">隱私權政策</a></div>
                 </div>
             </div>
         </footer>
@@ -740,14 +531,10 @@
                         <div class="container-fluid" style="padding: 0; padding-left: 1vw; padding-right: 1vw">
                             <div class="col" style="padding: 0; padding-right: 1vw; padding-left: 1vw">
                                 <div class="row no-gutters">
-                                    <div class="col" style="padding-right: 1vw; padding-left: 1vw; height: 308px">
-                                        <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/xZLvemutgJs" height="100%" width="80%"></iframe>
-                                    </div>
+                                    <div class="col" style="padding-right: 1vw; padding-left: 1vw; height: 308px"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/xZLvemutgJs" height="100%" width="80%"></iframe></div>
                                 </div>
                                 <div class="row no-gutters" style="margin-top: 23px">
-                                    <div class="col" style="padding-right: 1vw; padding-left: 1vw; height: 308px">
-                                        <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/G7r5bc0FlV0" height="100%" width="80%"></iframe>
-                                    </div>
+                                    <div class="col" style="padding-right: 1vw; padding-left: 1vw; height: 308px"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/G7r5bc0FlV0" height="100%" width="80%"></iframe></div>
                                 </div>
                                 <div class="row no-gutters" style="margin-top: 46px">
                                     <div class="col">
@@ -771,9 +558,7 @@
                         <div class="container-fluid" style="padding: 0; padding-left: 1vw; padding-right: 1vw">
                             <div class="col" style="padding: 0; padding-right: 1vw; padding-left: 1vw">
                                 <div class="row no-gutters">
-                                    <div class="col" style="padding-right: 1vw; padding-left: 1vw; height: 308px">
-                                        <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/aJ0x0zgO7MM" height="100%" width="80%"></iframe>
-                                    </div>
+                                    <div class="col" style="padding-right: 1vw; padding-left: 1vw; height: 308px"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/aJ0x0zgO7MM" height="100%" width="80%"></iframe></div>
                                 </div>
                                 <div class="row no-gutters" style="margin-top: 46px">
                                     <div class="col">
@@ -797,9 +582,7 @@
                         <div class="container-fluid" style="padding: 0; padding-left: 1vw; padding-right: 1vw">
                             <div class="col" style="padding: 0; padding-right: 1vw; padding-left: 1vw">
                                 <div class="row no-gutters">
-                                    <div class="col" style="padding-right: 1vw; padding-left: 1vw; height: 308px">
-                                        <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/J2mhSm-PB9Q" height="100%" width="80%"></iframe>
-                                    </div>
+                                    <div class="col" style="padding-right: 1vw; padding-left: 1vw; height: 308px"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/J2mhSm-PB9Q" height="100%" width="80%"></iframe></div>
                                 </div>
                                 <div class="row no-gutters" style="margin-top: 46px">
                                     <div class="col">
@@ -865,62 +648,34 @@
                         <div class="container-fluid" style="padding: 0; padding-left: 2vw; padding-right: 2vw">
                             <div class="row no-gutters" style="background: #000000">
                                 <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding-right: 1vw"><img class="img-fluid" src="assets/img/icon/1-02.png" /></div>
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/icon/1-03.png" />
-                                </div>
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/icon/1-04.png" />
-                                </div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw"><img class="img-fluid" src="assets/img/icon/1-03.png" /></div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw"><img class="img-fluid" src="assets/img/icon/1-04.png" /></div>
                             </div>
                             <div class="row no-gutters" style="background: #000000; margin-top: 15px">
                                 <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding-right: 1vw"><img class="img-fluid" src="assets/img/icon/1-05.png" /></div>
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/icon/1-06.png" />
-                                </div>
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/icon/1-07.png" />
-                                </div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw"><img class="img-fluid" src="assets/img/icon/1-06.png" /></div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw"><img class="img-fluid" src="assets/img/icon/1-07.png" /></div>
                             </div>
                             <div class="row no-gutters" style="background: #000000; margin-top: 15px">
                                 <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding-right: 1vw"><img class="img-fluid" src="assets/img/icon/1-08.png" /></div>
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/icon/1-09.png" />
-                                </div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw"><img class="img-fluid" src="assets/img/icon/1-09.png" /></div>
                             </div>
                             <div class="row no-gutters" style="background: rgba(255, 255, 255, 0); margin-top: 30px">
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/icon/icon-03.png" />
-                                </div>
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/icon/icon-04.png" />
-                                </div>
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/icon/icon-05.png" />
-                                </div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding-right: 1vw"><img class="img-fluid" src="assets/img/icon/icon-03.png" /></div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw"><img class="img-fluid" src="assets/img/icon/icon-04.png" /></div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw"><img class="img-fluid" src="assets/img/icon/icon-05.png" /></div>
                             </div>
                             <div class="row no-gutters" style="background: rgba(255, 255, 255, 0); margin-top: 30px">
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/icon/icon-06.png" />
-                                </div>
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/icon/icon-07.png" />
-                                </div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding-right: 1vw"><img class="img-fluid" src="assets/img/icon/icon-06.png" /></div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw"><img class="img-fluid" src="assets/img/icon/icon-07.png" /></div>
                             </div>
                             <div class="row no-gutters" style="background: rgba(255, 255, 255, 0); margin-top: 30px">
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/team/line-02.png" />
-                                </div>
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/team/email-02.png" />
-                                </div>
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/team/phone-02.png" />
-                                </div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding-right: 1vw"><img class="img-fluid" src="assets/img/team/line-02.png" /></div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw"><img class="img-fluid" src="assets/img/team/email-02.png" /></div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding: 0; padding-right: 1vw"><img class="img-fluid" src="assets/img/team/phone-02.png" /></div>
                             </div>
                             <div class="row no-gutters" style="background: rgba(255, 255, 255, 0); margin-top: 30px">
-                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding-right: 1vw">
-                                    <img class="img-fluid" src="assets/img/team/wechat-02.png" />
-                                </div>
+                                <div class="col align-self-center col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" style="padding-right: 1vw"><img class="img-fluid" src="assets/img/team/wechat-02.png" /></div>
                             </div>
                             <div class="row no-gutters" style="background: rgba(255, 255, 255, 0); margin-top: 30px">
                                 <div class="col align-self-center" style="padding-right: 1vw">
@@ -949,9 +704,7 @@
                                     <div class="row no-gutters justify-content-center">
                                         <div class="col col-xl-6 col-lg-6 col-md-6">
                                             <h4 style="font-family: Montserrat, sans-serif">Star Luxe Design<br /></h4>
-                                            <p style="font-family: 'Gen Jyuu Gothic Monospace Normal'">
-                                                以S/L/T,<br />三個字母為美國首飾品牌Star Luxe Design設計LOGO原型。<br />以簡單的線條構圖傳遞喜悅、開心享受之意象。<br /><br />
-                                            </p>
+                                            <p style="font-family: 'Gen Jyuu Gothic Monospace Normal'">以S/L/T,<br />三個字母為美國首飾品牌Star Luxe Design設計LOGO原型。<br />以簡單的線條構圖傳遞喜悅、開心享受之意象。<br /><br /></p>
                                         </div>
                                     </div>
                                 </div>
@@ -964,9 +717,7 @@
                                     <div class="row no-gutters justify-content-center">
                                         <div class="col col-xl-6 col-lg-6 col-md-6">
                                             <h4 style="font-family: Montserrat, sans-serif">Star Luxe Design<br /></h4>
-                                            <p style="font-family: 'Gen Jyuu Gothic Monospace Normal'">
-                                                以S作為帽簷<br />為美國首飾品牌Star Luxe Design設計LOGO之最終定稿。<br />強調首飾並以簡單的線條構圖傳遞喜悅、開心享受之意象。<br />
-                                            </p>
+                                            <p style="font-family: 'Gen Jyuu Gothic Monospace Normal'">以S作為帽簷<br />為美國首飾品牌Star Luxe Design設計LOGO之最終定稿。<br />強調首飾並以簡單的線條構圖傳遞喜悅、開心享受之意象。<br /></p>
                                         </div>
                                     </div>
                                 </div>
@@ -979,9 +730,7 @@
                                     <div class="row no-gutters justify-content-center">
                                         <div class="col col-xl-6 col-lg-6 col-md-6">
                                             <h4 style="font-family: Montserrat, sans-serif; margin-top: 13px">達訊數位股份有限公司<br /></h4>
-                                            <p style="font-family: 'Gen Jyuu Gothic Monospace Normal'">
-                                                每個板塊都是此業界的競爭者，有前有後<br />而我們就是這個產業的鯊魚、快速、靈敏、具侵略性。<br />也因此在標準字設計上將字首D也加入的鯊魚魚鰭的元素。<br />
-                                            </p>
+                                            <p style="font-family: 'Gen Jyuu Gothic Monospace Normal'">每個板塊都是此業界的競爭者，有前有後<br />而我們就是這個產業的鯊魚、快速、靈敏、具侵略性。<br />也因此在標準字設計上將字首D也加入的鯊魚魚鰭的元素。<br /></p>
                                         </div>
                                     </div>
                                 </div>
@@ -991,7 +740,105 @@
                 </div>
             </div>
         </div>
-        <script src="assets/js/jquery.min.js"></script>
+        <script>
+            $().ready(() => {
+                console.log($("#mysvg"));
+                gsap.to("#turbwave", {
+                    duration: 5,
+                    attr: { baseFrequency: 0 },
+                    repeat: 0,
+                    // yoyo: true,
+                });
+
+                gsap.registerPlugin(ScrollTrigger);
+
+                gsap.to("#turbwave", {
+                    duration: 5,
+                    attr: { baseFrequency: 0 },
+                    repeat: 0,
+                    scrollTrigger: {
+                        trigger: "#img",
+                        end: "bottom top",
+                        onEnter: () => console.log("onEnter"),
+                        onLeave: () => console.log("onLeave"),
+                        onEnterBack: () => console.log("onEnterBack"),
+                        toggleActions: "none none restart none",
+                    },
+                });
+            });
+
+            var aboutusHovering = false;
+            var collectionsHovering = false;
+            $().ready(() => {
+                $("#about-us-hover").mouseenter(() => {
+                    if (aboutusHovering == false) {
+                        aboutusHovering = true;
+                        console.log("1");
+                        var tl = gsap.timeline();
+                        tl.to("#about-us", {
+                            duration: 0.2,
+                            y: -100,
+                        });
+                        screenY;
+                        tl.to("#about-us", {
+                            duration: 0.3,
+                            rotationY: 360,
+                            repeat: 2,
+                            yoyo: true,
+                            ease: Linear.easeNone,
+                        });
+                        tl.to("#about-us", {
+                            duration: 0.5,
+                            y: 0,
+                            ease: "bounce",
+                            onComplete: () => {
+                                gsap.set("#about-us", { rotationY: 0 });
+                                aboutusHovering = false;
+                            },
+                        });
+                    } else {
+                        console.log("hovering");
+                    }
+                });
+            });
+
+            $().ready(() => {
+                $("#collections-hover").mouseenter(() => {
+                    if (collectionsHovering == false) {
+                        collectionsHovering = true;
+                        var tl = gsap.timeline();
+
+                        console.log(2);
+                        tl.to("#collections", {
+                            duration: 0.2,
+                            y: -100,
+                        });
+                        tl.to("#collections", {
+                            duration: 0.3,
+                            rotationY: 360,
+                            repeat: 2,
+                            yoyo: true,
+                            ease: Linear.easeNone,
+                        });
+                        tl.to("#collections", {
+                            duration: 0.5,
+                            y: 0,
+                            ease: "bounce",
+                            onComplete: () => {
+                                gsap.set("#collections", { rotationY: 0 });
+                                collectionsHovering = false;
+                            },
+                        });
+                    } else {
+                        console.log("hovering");
+                    }
+                });
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/bs-init.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
