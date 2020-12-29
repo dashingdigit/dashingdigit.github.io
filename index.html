@@ -1457,23 +1457,23 @@ function hyperLinkAnimation(){
                         var tl = gsap.timeline();
 
                         console.log(2);
-                        tl.to("#collections", {
+                        tl.to("#collections-href", {
                             duration: 0.2,
                             y: -100,
                         });
-                        tl.to("#collections", {
+                        tl.to("#collections-href", {
                             duration: 0.3,
                             rotationY: 360,
                             repeat: 2,
                             yoyo: true,
                             ease: Linear.easeNone,
                         });
-                        tl.to("#collections", {
+                        tl.to("#collections-href", {
                             duration: 0.5,
                             y: 0,
                             ease: "bounce",
                             onComplete: () => {
-                                gsap.set("#collections", { rotationY: 0 });
+                                gsap.set("#collections-href", { rotationY: 0 });
                                 collectionsHovering = false;
                             },
                         });
